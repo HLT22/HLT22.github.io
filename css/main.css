@@ -31,6 +31,6 @@ li a:hover:not(.active) {
 }
 
 body {
-  margin: 0;
   background-color: darkred;
+  margin-left:25%;padding:1px 16px;height:1000px;
 }
