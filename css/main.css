@@ -21,16 +21,16 @@ li a {
 }
 
 li a.active {
-  background-color: #04AA6D;
+  background-color: darkblue;
   color: white;
 }
 
 li a:hover:not(.active) {
-  background-color: #555;
-  color: darkblue;
+  background-color: darkblue;
+  color: white;
 }
 
 body {
   margin: 0;
-  background-color: tomato;
+  background-color: darkred;
 }
