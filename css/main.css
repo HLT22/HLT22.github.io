@@ -6,9 +6,14 @@ h5 {
   color:white;
 }
 
+h6 {
+  color:white;
+}
+
 body {
   background-color: darkred;
   margin: 0;
+  font-family: "Fantasy", "Papyrus";
 }
 
 footer {
