@@ -24,7 +24,7 @@ footer {
   width: 400px;
   height: 400px;
   position: relative;
-  background-image: url(assets/orion.png);
+  background-image: url("https://hlt22.github.io/Assets/orion.png");
   background-repeat: no-repeat;
   background-size: auto;
 }
