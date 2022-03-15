@@ -78,3 +78,10 @@ footer {
   top: 250px;
   left: 120px;
 }
+
+#ballField {
+  position: relative;
+  background-image: url(assets/baseballField.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
