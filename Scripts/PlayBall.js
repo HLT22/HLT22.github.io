@@ -11,6 +11,7 @@ function pitch() {
 
   contactTick = null;
 
+  img.src = "https://hlt22.github.io/Assets/batterHit.png";
   img.src = "https://hlt22.github.io/Assets/batterReady.png";
 
   ctx.clearRect(0, 0, 600, 400);
