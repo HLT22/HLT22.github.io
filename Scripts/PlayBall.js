@@ -10,7 +10,7 @@ function pitch() {
   let id = null;
 
 
-  img.src = "Assets/batterReady.png";
+  img.src = "https://hlt22.github.io/Assets/batterReady.png";
 
   ctx.clearRect(0, 0, 600, 400);
 
@@ -29,7 +29,7 @@ function pitch() {
     } else if (pos >=462) {
         if (contactTick == 1) {
           clearInterval(id);
-          img.src = "Assets/batterHit.png"
+          img.src = "https://hlt22.github.io/Assets/batterHit.png"
           ctx.drawImage(img, 409, 66, 120, 120);
           ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
       
@@ -38,7 +38,7 @@ function pitch() {
             ballSize = ballSize - 0.0021;
             x = pos;
             ctx.clearRect(0, 0, 600, 400);
-            img.src = "Assets/batterReady.png"
+            img.src = "https://hlt22.github.io/Assets/batterReady.png"
             ctx.drawImage(img, 409, 66, 120, 120);
             ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
         }
@@ -49,7 +49,7 @@ function pitch() {
           ballSize = ballSize - 0.0021;
           x = pos;
           ctx.clearRect(0, 0, 600, 400);
-          img.src = "Assets/batterHit.png"
+          img.src = "https://hlt22.github.io/Assets/batterHit.png"
           ctx.drawImage(img, 409, 66, 120, 120);
           ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
           } else {
@@ -57,7 +57,7 @@ function pitch() {
             ballSize = ballSize - 0.0021;
             x = pos;
             ctx.clearRect(0, 0, 600, 400);
-            img.src = "Assets/batterReady.png"
+            img.src = "https://hlt22.github.io/Assets/batterReady.png"
             ctx.drawImage(img, 409, 66, 120, 120);
             ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
           }
