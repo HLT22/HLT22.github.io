@@ -66,17 +66,31 @@
             <br>
             <h1>...Javascript creations</h1>
             <br>
-            <p><button onclick="myMove()">Click Me</button></p>
+            <div class="col">
+              <p><button onclick="myMove()">Click Me</button></p>
 
-            <div id ="container">
-              <div id ="animateH">H</div>
-              <div id ="animateU">U</div>
-              <div id ="animateN">N</div>
-              <div id ="animateT">T</div>
-              <div id ="animateE">E</div>
-              <div id ="animateR">R</div>
+              <div id ="container">
+                <div id ="animateH">H</div>
+                <div id ="animateU">U</div>
+                <div id ="animateN">N</div>
+                <div id ="animateT">T</div>
+                <div id ="animateE">E</div>
+                <div id ="animateR">R</div>
+              </div>
+              <script src="https://hlt22.github.io/Scripts/orionAnimation.js"></script>
             </div>
-            <script src="https://hlt22.github.io/Scripts/orionAnimation.js"></script>
+            <div class="col">
+              <p><button onclick="pitch()">Pitch</button>Click to pitch the ball.</p>
+
+              <p><button onclick="swing()">Swing</button>Click to swing the bat.</p>
+
+              <canvas id ="ballField" width="600" height="400">
+              </canvas>
+              
+              <script src="PlayBall.js"></script>
+              <script src="swing.js"></script>
+              
+            </div>
           </div>
         </div>
       </div>
