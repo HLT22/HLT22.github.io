@@ -9,6 +9,7 @@ let contactTick = null;
 function pitch() {
   let id = null;
 
+  contactTick = null;
 
   img.src = "https://hlt22.github.io/Assets/batterReady.png";
 
