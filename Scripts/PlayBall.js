@@ -30,10 +30,12 @@ function pitch() {
       clearInterval(id);
     } else if (pos >=462) {
         if (contactTick == 1) {
-          clearInterval(id);
+          pos++;
+          x = pos;
+          ctx.clearRect(0, 0, 600, 400);                                                                                                              // clearInterval(id);
           img.src = "https://hlt22.github.io/Assets/batterHit.png"
           ctx.drawImage(img, 409, 66, 120, 120);
-          ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+          ctx.fillRect(462 - 35 * (x - 462), 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
       
         } else {
             pos++;
