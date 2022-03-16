@@ -36,7 +36,7 @@ function pitch() {
           img.src = "https://hlt22.github.io/Assets/batterHit.png"
           ctx.drawImage(img, 409, 66, 120, 120);
           ctx.fillRect(462 - 35 * (x - 462), 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
-      
+
         } else {
             pos++;
             ballSize = ballSize - 0.0021;
@@ -79,7 +79,7 @@ function pitch() {
 
 function swing() {
   img.src = "https://hlt22.github.io/Assets/batterSwing.png";
-  if (x > 445 && x < 460) {
+  if (x > 435 && x < 460) {
     contactTick = 1;
     frame();
   }
