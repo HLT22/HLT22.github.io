@@ -1,25 +1,30 @@
+/* styles for main tags*/
+
 h1 {
-  color:blue;
+  color:black;
 }
 
 h5 {
-  color:white;
+  color:black;
 }
 
 h6 {
-  color:white;
+  color:black;
 }
 
 body {
-  background-color: darkred;
+  background-color: white;
   margin: 0;
-  font-family: "Fantasy", "Papyrus";
+  font-family: "Arial", "Helvetica", "sans-serif";
 }
 
 footer {
   color:white;
+  background-color: black;
 }
 
+/* ID styles */
+    /* ID's for orionAnimation.js */
 #container {
   width: 400px;
   height: 400px;
@@ -78,6 +83,8 @@ footer {
   top: 250px;
   left: 120px;
 }
+
+    /* ID's for PlayBall.js */
 
 #ballField {
   position: relative;
