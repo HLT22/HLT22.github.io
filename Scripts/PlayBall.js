@@ -4,12 +4,12 @@ const ctx = canvas.getContext("2d");
 let img = document.createElement("img");
 
 
-let contactTick = null;      // used to keep track of wether contact was made
+let contactTick = null;
 
-function pitch() {           //sends the ball towards the batter
+function pitch() {
   let id = null;
 
-  contactTick = null;       //resets contact ticker
+  contactTick = null;
 
   img.src = "https://hlt22.github.io/Assets/batterHit.png";
   img.src = "https://hlt22.github.io/Assets/batterReady.png";
@@ -25,13 +25,62 @@ function pitch() {           //sends the ball towards the batter
 
   clearInterval(id);
   id = setInterval(frame, 5);
-  function frame() {           //continuously redraws the canvas img, new frame every time, makes a new frame
-    if (pos == 480) {          //ends frame generation if pos reaches 480
+  function frame() {
+    if (pos == 480) {
       clearInterval(id);
-    } else if (pos >=462) {     //determines what to do with the ball once it reaches the batter
-        hit(contactTick, pos)   //sends the ball off like it has been hit or resets batter and lets the ball go to the catcher
-      } else {                 //moves ball toward batter
-          ballpath(pos,img)
+    } else if (pos >=462) {
+        if (contactTick == 1) {
+          pos++;
+          x = pos;
+          ctx.clearRect(0, 0, 600, 400);                                                                                                              // clearInterval(id);
+          img.src = "https://hlt22.github.io/Assets/batterHit.png"
+          ctx.drawImage(img, 409, 66, 120, 120);
+          ctx.fillRect(462 - 35 * (x - 462), 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+
+        } else {
+            pos++;
+            ballSize = ballSize - 0.0021;
+            x = pos;
+            ctx.clearRect(0, 0, 600, 400);
+            img.src = "https://hlt22.github.io/Assets/batterReady.png"
+            ctx.drawImage(img, 409, 66, 120, 120);
+            ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+        }
+
+    } else if (pos >= 461){
+        if (contactTick == 1) {
+          pos++;
+          ballSize = ballSize - 0.0021;
+          x = pos;
+          ctx.clearRect(0, 0, 600, 400);
+          img.src = "https://hlt22.github.io/Assets/batterHit.png"
+          ctx.drawImage(img, 409, 66, 120, 120);
+          ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+          } else {
+            pos++;
+            ballSize = ballSize - 0.0021;
+            x = pos;
+            ctx.clearRect(0, 0, 600, 400);
+            img.src = "https://hlt22.github.io/Assets/batterReady.png"
+            ctx.drawImage(img, 409, 66, 120, 120);
+            ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+          }
+      } else {
+          pos++;
+          ballSize = ballSize - 0.0021;
+          x = pos;
+          ctx.clearRect(0, 0, 600, 400);
+          ctx.drawImage(img, 409, 66, 120, 120);
+          ctx.fillRect(x, 400 - .60 * x, Math.round(ballSize * 20 + 10), Math.round(ballSize * 20 + 10));
+
     }
+  }
+}
+
+function swing() {
+  img.src = "https://hlt22.github.io/Assets/batterSwing.png";
+  if (x > 435 && x < 460) {
+    contactTick = 1;
+    frame();
   }
 }
